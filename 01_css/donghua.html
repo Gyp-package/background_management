@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: my 5s;
+            /* 反转 */
+            animation: my 5s reverse;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        /* @keyframes my {
+            from {
+                background: red;
+            }
+            to {
+                background: yellow;
+            }
+        } */
+        
+        @keyframes my {
+            0% {
+                position: absolute;
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                position: absolute;
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+            50% {
+                position: absolute;
+                background: green;
+                left: 400px;
+                top: 400px;
+                /* 平移 */
+                transform: translateX(300px);
+            }
+            75% {
+                position: absolute;
+                background: grey;
+                left: 600px;
+                top: 600px;
+            }
+            100% {
+                position: absolute;
+                background: purple;
+                left: 800px;
+                top: 800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
