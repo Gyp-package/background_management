@@ -90,5 +90,12 @@ user.js填写mock数据，mock.js 管理mock模拟的后台数据，index.js定�
 编辑时需要深拷贝，保护源数据
 
 <!-- 登录权限 -->
+
+不同账号登录，展示不同菜单
+url输入地址显示页面需要权限限制（router的动态路由注册）
+cookie缓存menu数据，防止页面刷新未缓存导致数据丢失
+
 tooken用户权限，登录时返回后端一个接口，后端给出tooken放在请求头中（cookie保存），然后带着token前往服务器请求进行验证，
-cookie set,get,remove
+cookie 的 set,get,remove
+
+重刷新白屏：将addMenu挂载到根节点
